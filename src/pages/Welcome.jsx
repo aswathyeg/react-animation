@@ -8,13 +8,13 @@ export default function WelcomePage ()  {
   return (
     <>
     <header id='outer'>
-      <div id='inner'>
+      <motion.div id='inner'>
       <h1>Ready for a challenge?</h1>
           <Link id="cta-link" to="/challenges">
             Get Started
           </Link>
-          </div>
-      <img
+          </motion.div>
+      <motion.img
         src={women}
         alt="A city skyline touched by sunlight"
         id="cloud-image"
