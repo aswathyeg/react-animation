@@ -1,8 +1,8 @@
 
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
-import ChallengePage from './components/pages/Challenge.jsx'
-import WelcomePage from './components/pages/Welcome.jsx'
+import ChallengePage from './pages/Challenge.jsx'
+import WelcomePage from './pages/Welcome.jsx'
 const router=createBrowserRouter([
   {
     path:'/',element:<WelcomePage/>,
