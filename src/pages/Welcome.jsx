@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import women from '../assets/women.jpg';
 import heroImg from '../assets/hero.png';
+import {motion} from 'framer-motion'
 
 export default function WelcomePage ()  {
   return (
