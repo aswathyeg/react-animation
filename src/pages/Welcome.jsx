@@ -5,16 +5,22 @@ import heroImg from '../assets/hero.png';
 import {motion,useScroll,useTransform} from 'framer-motion'
 
 export default function WelcomePage ()  {
+  const{scrollY}=useScroll();
+  const yBack=useTransform(scrollY,[0,200],[0,-100]);
+const opacityWomen=useTransform(scrollY,[0,200,300,500],[1,0.5,0.5,0]);
+const scaleText=useTransform(scrollY,[0,300],[1,1.5]);
+const yText=useTransform(scrollY,[0,200,300,500],[0,50,50,300]);
   return (
     <>
     <header id='outer'>
-      <motion.div id='inner'>
+      <motion.div id='inner' style={{scale:scaleText,y:yText}}>
       <h1>Ready for a challenge?</h1>
           <Link id="cta-link" to="/challenges">
             Get Started
           </Link>
           </motion.div>
       <motion.img
+      style={{opacity:opacityWomen,y:yBack}}
         src={women}
         alt="A city skyline touched by sunlight"
         id="cloud-image"
